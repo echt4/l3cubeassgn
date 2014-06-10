@@ -1,0 +1,45 @@
+#include<conio.h>
+#include<stdio.h>
+#include<process.h>
+void enter();
+int main()
+{
+	int ch;
+	do
+	{
+		clrscr();
+		printf("\nMENU:\n\n");
+		printf("\n1.Provide number of people\n");
+		printf("\n2.Exit\n");
+		printf("\nEnter your choice: ");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+			case 1: enter();
+					break;
+
+			case 2: exit(0);
+					break;
+		}
+		printf("\nPress any key to continue..");
+		getch();
+	}while(ch!=2);
+	return 0;
+}
+
+void enter()
+{
+	int no_people,n,i;
+	double p;
+	printf("\nEnter the number of people to be checked for same birthdays: ");
+	scanf("%d", &no_people);
+	for(n=1;n<=no_people;n++)
+	{
+		p=1;
+		for(i=0;i<n;i++)
+		{
+			p *=(365.0 - i) / 365.0;
+		}
+	}
+	printf("\nFor %d people, probability is %.4f\n", no_people, 1-p);
+}

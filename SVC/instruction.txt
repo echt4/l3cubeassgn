@@ -1,0 +1,7 @@
+-In our interpretation of SVC, we have created a text file called test.txt.
+-To commit, we use 'svc filename.txt', which in this case is test.txt.
+-To display version, we use 'svc N', where N is version number.
+-For example, svc 0 /*version 0*/
+-To append a line, simply input desired line and commit to create new  version.
+-To delete, type 'delete' keyword, and commit to create new version.
+-To exit, type 'exit'.
